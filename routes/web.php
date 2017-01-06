@@ -14,6 +14,10 @@
 
 Auth::routes();
 
+Route::get('/', function() {
+	return redirect('/home');
+});
+
 Route::get('/home', 'RootController@index');
 Route::resource('medicines', 'MedicinesController');
 Route::resource('patients', 'PatientsController');
