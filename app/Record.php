@@ -25,7 +25,7 @@ class Record extends Model
      *
      * @var array
      */
-    protected $fillable = ['patient_id', 'doctor_id', 'keluhan', 'diagnosa', 'kadar_asam', 'tekanan_darah', 'kadar_gula', 'penanganan'];
+    protected $fillable = ['patient_id', 'doctor_id', 'keluhan', 'diagnosa', 'penanganan'];
 
     
 }

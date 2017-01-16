@@ -32,27 +32,6 @@
         {!! $errors->first('diagnosa', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
-<div class="form-group {{ $errors->has('kadar_asam') ? 'has-error' : ''}}">
-    {!! Form::label('kadar_asam', 'Kadar Asam', ['class' => 'col-md-4 control-label']) !!}
-    <div class="col-md-6">
-        {!! Form::number('kadar_asam', null, ['class' => 'form-control']) !!}
-        {!! $errors->first('kadar_asam', '<p class="help-block">:message</p>') !!}
-    </div>
-</div>
-<div class="form-group {{ $errors->has('tekanan_darah') ? 'has-error' : ''}}">
-    {!! Form::label('tekanan_darah', 'Tekanan Darah', ['class' => 'col-md-4 control-label']) !!}
-    <div class="col-md-6">
-        {!! Form::number('tekanan_darah', null, ['class' => 'form-control']) !!}
-        {!! $errors->first('tekanan_darah', '<p class="help-block">:message</p>') !!}
-    </div>
-</div>
-<div class="form-group {{ $errors->has('kadar_gula') ? 'has-error' : ''}}">
-    {!! Form::label('kadar_gula', 'Kadar Gula', ['class' => 'col-md-4 control-label']) !!}
-    <div class="col-md-6">
-        {!! Form::number('kadar_gula', null, ['class' => 'form-control']) !!}
-        {!! $errors->first('kadar_gula', '<p class="help-block">:message</p>') !!}
-    </div>
-</div>
 <div class="form-group {{ $errors->has('penanganan') ? 'has-error' : ''}}">
     {!! Form::label('penanganan', 'Penanganan', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">

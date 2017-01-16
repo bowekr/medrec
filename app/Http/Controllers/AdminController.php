@@ -19,7 +19,7 @@ class AdminController extends Controller
     	$doctor = User::where('role', 'doctor')->get();
     	$apoteker = User::where('role', 'apoteker')->get();
         $admin = User::where('role', 'admin')->get();
-        $users = User::all();
+        $users = User::paginate(10);
 
     	return view('admin.index', [
     		'doctors' => $doctor,

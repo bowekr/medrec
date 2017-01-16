@@ -5,10 +5,10 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Doctors</div>
+                <div class="panel-heading">Users</div>
                 <div class="panel-body">
 
-                    <a href="{{ url('/admin/create') }}" class="btn btn-primary btn-xs" title="Add New doctor"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a>
+                    <a href="{{ url('/admin/create') }}" class="btn btn-primary btn-xs" title="Add new User"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a>
                     <br/>
                     <br/>
                     <div class="table-responsive">
@@ -16,7 +16,7 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th> Name </th>
+                                    <th>Name </th>
                                     <th>Role</th>
                                     <th>Email</th>
                                 </tr>
@@ -32,6 +32,7 @@
                             @endforeach
                             </tbody>
                         </table>
+                        <div class="pagination-wrapper"> {!! $users->render() !!} </div>
                     </div>
 
                 </div>

@@ -14,9 +14,12 @@
 		      </div>
 		    </a>
 		  </div>
+
+		 {{ $medicines_count }}
 	  @endif
 
-		@if ($authUserRole === "doctor" || $authUserRole === "admin")
+
+
 		  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 		    <a href={{ url('patients') }} class="card card-banner card-yellow-light">
 		      <div class="card-body">
@@ -28,7 +31,6 @@
 		      </div>
 		    </a>
 		  </div>
-	  @endif
 
 
 		@if ($authUserRole === "admin")
@@ -60,5 +62,18 @@
 		  </div>
 	  @endif
 
+	  @if ($authUserRole === "admin")
+	  	<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	  	  <a href={{ url('admin') }} class="card card-banner card-green-light">
+	  	    <div class="card-body">
+	  	      <i class="icon fa fa-user fa-4x"></i>
+	  	      <div class="content">
+	  	        <div class="title">Manage Users</div>
+	  	        <div class="value"></div>
+	  	      </div>
+	  	    </div>
+	  	  </a>
+	  	</div>
+	  @endif
 	</div>
 @endsection

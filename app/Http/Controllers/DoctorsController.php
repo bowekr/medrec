@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Doctor;
 use Illuminate\Http\Request;
 use Auth;
+use Validator;
 use Session;
 
 class DoctorsController extends Controller
