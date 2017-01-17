@@ -12,7 +12,17 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    {!! Html::style('css/bootstrap.min.css') !!}
 
+    {!! Html::style('css/vendor.css') !!}
+    {!! Html::style('css/flat-admin.css') !!}
+    {!! Html::style('css/jquery-ui.css') !!}
+
+    <!-- Theme -->
+    {!! Html::style('css/theme/blue-sky.css') !!}
+    {!! Html::style('css/theme/blue.css') !!}
+    {!! Html::style('css/theme/red.css') !!}
+    {!! Html::style('css/theme/yellow.css') !!}
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -83,5 +93,10 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    {!! Html::script('js/vendor.js') !!}
+    {!! Html::script('js/app.js') !!}
+    {!! Html::script('js/bootstrap.min.js') !!}
+    {!! Html::script('js/jquery-ui.min.js') !!}
+
 </body>
 </html>

@@ -21,6 +21,22 @@
     </div>
 </div>
 
+<div class="form-group {{ $errors->has('phone_number') ? 'has-error' : ''}}">
+    {!! Form::label('phone_number', 'Phone Number', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        {!! Form::text('phone_number', null, ['class' => 'form-control']) !!}
+        {!! $errors->first('phone_number', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>
+
+<div class="form-group {{ $errors->has('address') ? 'has-error' : ''}}">
+    {!! Form::label('address', 'Address', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        {!! Form::textarea('address', null, ['class' => 'form-control']) !!}
+        {!! $errors->first('address', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>
+
 <div class="form-group">
     <label class="col-md-4 control-label" for="role">Role</label>
     <div class="col-md-6">

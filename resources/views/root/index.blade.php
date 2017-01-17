@@ -14,23 +14,21 @@
 		      </div>
 		    </a>
 		  </div>
-
-		 {{ $medicines_count }}
 	  @endif
 
 
 
-		  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-		    <a href={{ url('patients') }} class="card card-banner card-yellow-light">
-		      <div class="card-body">
-		        <i class="icon fa fa-plus-square fa-4x"></i>
-		        <div class="content">
-		          <div class="title">Total Patients</div>
-		          <div class="value">{{ $patients_count }}</div>
-		        </div>
-		      </div>
-		    </a>
-		  </div>
+	  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	    <a href={{ url('patients') }} class="card card-banner card-yellow-light">
+	      <div class="card-body">
+	        <i class="icon fa fa-plus-square fa-4x"></i>
+	        <div class="content">
+	          <div class="title">Total Patients</div>
+	          <div class="value">{{ $patients_count }}</div>
+	        </div>
+	      </div>
+	    </a>
+	  </div>
 
 
 		@if ($authUserRole === "admin")

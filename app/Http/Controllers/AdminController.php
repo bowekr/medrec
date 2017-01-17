@@ -59,4 +59,21 @@ class AdminController extends Controller
                              ->withErrors($validator);
         }
     }
+
+    public function show($id)
+    {
+        $record = User::findOrFail($id);
+
+        return view('admin.show', compact('record'));
+    }
+
+    public function destroy($id)
+    {
+        User::destroy($id);
+
+        Session::flash('flash_message', 'Doctor deleted!');
+
+        return redirect('admin');
+    }
+
 }
