@@ -19,7 +19,7 @@ class CreatePatientTable extends Migration
             $table->date('text')->nullable();
             $table->text('address')->nullable();
             $table->string('born_date')->nullable();
-            $table->integer('phone_number')->nullable();
+            $table->string('phone_number')->nullable();
             $table->string('blood_type')->nullable();
         });
     }
