@@ -21,6 +21,11 @@
                                     'onclick'=>'return confirm("Confirm delete?")'
                             ))!!}
                         {!! Form::close() !!}
+
+                        <button class="btn btn-success btn-xs">
+                            <i class="fa fa-print"></i>
+                            Print
+                        </button>
                         <br/>
                         <br/>
 

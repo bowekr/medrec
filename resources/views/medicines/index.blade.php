@@ -10,6 +10,10 @@
 
 			<div style="padding: 30px;">
 				<a href={{ url('/medicines/create') }} class="btn btn-success">New</a>
+				<button class="btn btn-primary">
+					<i class="fa fa-print"></i>
+					Print All
+				</button>
 			</div>
 
 			<div class="card-body">
