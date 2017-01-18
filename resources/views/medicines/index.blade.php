@@ -20,6 +20,8 @@
 			          <tr>
 			            <th>Medicine Code</th>
 			            <th>Medicine Name</th>
+			            <th>Category</th>
+			            <th>Stock</th>
 			            <th>Actions</th>
 			          </tr>
 			        </thead>
@@ -28,6 +30,8 @@
 				          <tr>
 				            <th scope="row">{{ $medicine->id }}</th>
 				            <td>{{ $medicine->name }}</td>
+				            <td>{{ $medicine->category }}</td>
+				            <td>{{ $medicine->stock }}</td>
 				            <td></td>
 
 				            <td>

@@ -10,6 +10,7 @@ use App\Patient;
 use App\Doctor;
 use Illuminate\Http\Request;
 use Session;
+use App\User;
 
 class RecordController extends Controller
 {
@@ -38,7 +39,7 @@ class RecordController extends Controller
     public function create()
     {
         $patients = Patient::all();
-        $doctors = Doctor::all();
+        $doctors = User::where('role', 'doctor')->get();
         return view('record.record.create', [
             'patients' => $patients,
             'doctors' => $doctors

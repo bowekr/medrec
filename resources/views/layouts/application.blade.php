@@ -33,7 +33,7 @@
     {!! Html::script('js/vendor.js') !!}
     {!! Html::script('js/app.js') !!}
     {!! Html::script('js/bootstrap.min.js') !!}
-    {!! Html::script('js/jquery-ui.min.js') !!}
+    {!! Html::script('js/jquery-ui.js') !!}
 
     @yield('assetsInclude')
   </body>

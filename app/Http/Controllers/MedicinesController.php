@@ -64,6 +64,9 @@ class MedicinesController extends Controller
         if (!$validator->fails()) {
             $medicine = new Medicine;
             $medicine->name = $request->name;
+            $medicine->stock = $request->stock;
+            $medicine->category = $request->category;
+
             $medicine->save();
 
 

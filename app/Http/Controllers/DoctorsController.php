@@ -25,7 +25,7 @@ class DoctorsController extends Controller
     
     public function index()
     {
-        if(Auth::user()->role === "doctor")
+        if(Auth::user()->role === "doctor" || Auth::user()->role === "admin")
         {
             $doctors = Doctor::paginate(25);
 
@@ -42,7 +42,7 @@ class DoctorsController extends Controller
      */
     public function create()
     {
-        if(Auth::user()->role === "doctor")
+        if(Auth::user()->role === "doctor" || Auth::user()->role === "admin")
         {
             return view('doctors.create');
         } else {
@@ -59,7 +59,7 @@ class DoctorsController extends Controller
      */
     public function store(Request $request)
     {
-        if(Auth::user()->role === "doctor" || Auth::user->role === "admin")
+        if(Auth::user()->role === "doctor" || Auth::user()->role === "admin")
         {
 
             $requestData = $request->all();

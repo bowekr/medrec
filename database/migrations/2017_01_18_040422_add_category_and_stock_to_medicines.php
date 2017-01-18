@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddAddressAndPhoneNumerToUser extends Migration
+class AddCategoryAndStockToMedicines extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class AddAddressAndPhoneNumerToUser extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->integer('phone_number')->nullable();
-            $table->string('address')->nullable();
+        Schema::table('medicines', function(Blueprint $table) {
+            $table->string('category')->nullable();
+            $table->integer('stock')->nullable();
         });
     }
 

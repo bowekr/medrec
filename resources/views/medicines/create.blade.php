@@ -13,6 +13,13 @@
 						<label for="name">Medicine Name</label>
 						<input class="form-control" type="text" id="name" name="name" />
 
+
+						<label for="category">Category</label>
+						<input class="form-control" type="text" id="category" name="category" />
+
+						<label for="stock">Stock</label>
+						<input class="form-control" type="number" id="stock" name="stock" />
+
 						<button class="btn btn-primary" type="submit">Save</button>
 					</form>
 				</div>
