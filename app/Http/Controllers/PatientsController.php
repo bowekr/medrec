@@ -50,11 +50,13 @@ class PatientsController extends Controller
         
         $requestData = $request->all();
         
-        Patient::create($requestData);
+        $patient = Patient::create($requestData);
 
         Session::flash('flash_message', 'Patient added!');
 
-        return redirect('patients');
+        return redirect()->action('PatientsController@show', [
+            'id' => $patient->id
+        ]);
     }
 
     /**

@@ -16,12 +16,12 @@ class CreateRecordsTable extends Migration
             $table->increments('id');
             $table->integer('patient_id');
             $table->integer('doctor_id');
-            $table->text('keluhan');
-            $table->text('diagnosa');
-            $table->integer('kadar_asam');
-            $table->integer('tekanan_darah');
-            $table->integer('kadar_gula');
-            $table->string('penanganan');
+            $table->text('keluhan')->nullable();
+            $table->text('diagnosa')->nullable();
+            $table->integer('kadar_asam')->nullable();
+            $table->integer('tekanan_darah')->nullable();
+            $table->integer('kadar_gula')->nullable();
+            $table->string('penanganan')->nullable();
             $table->timestamps();
         });
     }

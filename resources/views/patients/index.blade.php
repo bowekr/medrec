@@ -10,6 +10,10 @@
 
 			<div style="padding: 30px;">
 				<a href={{ url('/patients/create') }} class="btn btn-success">New</a>
+				<button class="btn btn-primary">
+					<i class="fa fa-print"></i>
+					Print All
+				</button>
 			</div>
 
 			<div class="card-body">
@@ -39,7 +43,12 @@
 				            <td>{{ $patient->phone_number }}</td>
 				            
 
-				            <td><a href="{{ url('patients/' . $patient->id . '/edit') }}">Edit</a></td>
+				            <td><a href="{{ url('patients/' . $patient->id . '/edit') }}">Edit</a>
+
+				            <a href="{{ url('/patients/' . $patient->id) }}" class="btn btn-primary btn-xs" title="Show Patient"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
+
+
+				            </td>
 
 				          </tr>
 			          @endforeach
