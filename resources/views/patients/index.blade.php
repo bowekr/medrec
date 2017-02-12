@@ -39,16 +39,25 @@
 				            <td>{{ $patient->gender }}</td>
 				            <td>{{ $patient->address }}</td>
 				            <td>{{ $patient->born_date }}</td>
-				            <td>{{ $patient->blood_type }}</td>
 				            <td>{{ $patient->phone_number }}</td>
-				            
+				     
 
-				            <td><a href="{{ url('patients/' . $patient->id . '/edit') }}">Edit</a>
-
-				            <a href="{{ url('/patients/' . $patient->id) }}" class="btn btn-primary btn-xs" title="Show Patient"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
-
-
-				            </td>
+				     			<td>
+				     			    <a href="{{ url('/patients/' . $patient->id) }}" class="btn btn-success btn-xs" title="View patient"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
+				     			    <a href="{{ url('/patients/' . $patient->id . '/edit') }}" class="btn btn-primary btn-xs" title="Edit patient"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+				     			    {!! Form::open([
+				     			        'method'=>'DELETE',
+				     			        'url' => ['/patients', $patient->id],
+				     			        'style' => 'display:inline'
+				     			    ]) !!}
+				     			        {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true" title="Delete patient" />', array(
+				     			                'type' => 'submit',
+				     			                'class' => 'btn btn-danger btn-xs',
+				     			                'title' => 'Delete patient',
+				     			                'onclick'=>'return confirm("Confirm delete?")'
+				     			        )) !!}
+				     			    {!! Form::close() !!}
+				     			</td>
 
 				          </tr>
 			          @endforeach
