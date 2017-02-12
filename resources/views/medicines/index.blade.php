@@ -39,6 +39,7 @@
 				            <td></td>
 
 				            <td>
+				            	<a href="{{ url('/medicines/' . $medicine->id) }}" class="btn btn-success btn-xs" title="View Record"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
 				            	<a class="btn btn-warning btn-xs" href="{{ url('medicines/' . $medicine->id . '/edit') }}">
 				            		<span class="glyphicon glyphicon-pencil" aria-hidden="true"/>
 				            	</a>

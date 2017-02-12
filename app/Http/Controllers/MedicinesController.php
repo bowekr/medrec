@@ -108,7 +108,9 @@ class MedicinesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $medicine = Medicine::findOrFail($id);
+
+        return view('medicines.edit', compact('medicine'));
     }
 
     /**
@@ -120,7 +122,16 @@ class MedicinesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $requestData = $request->all();
+       
+       $medicine = Medicine::findOrFail($id);
+       $medicine->update($requestData);
+
+       Session::flash('flash_message', 'medicine updated!');
+
+       return redirect()->action('MedicinesController@show', [
+           'id' => $medicine->id
+       ]);;
     }
 
     /**
