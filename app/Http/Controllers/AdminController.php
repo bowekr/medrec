@@ -67,6 +67,25 @@ class AdminController extends Controller
         return view('admin.show', compact('record'));
     }
 
+    public function edit($id)
+    {
+        $record = User::findOrFail($id);
+
+        return view('admin.edit', compact('record'));
+    }
+
+    public function update($id, Request $request)
+    {
+        $requestData = $request->all();
+        
+        $record = User::findOrFail($id);
+        $record->update($requestData);
+
+        return redirect()->action('AdminController@show', [
+            'id' => $record->id
+        ]);;
+    }
+
     public function destroy($id)
     {
         User::destroy($id);

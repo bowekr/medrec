@@ -27,8 +27,8 @@
 			            <th>Gender</th>
 			            <th>Address</th>
 			            <th>Born Date</th>
-			            <th>Blood Type</th>
 			            <th>Phone Number</th>
+			            <th>Action</th>
 			          </tr>
 			        </thead>
 			        <tbody>
