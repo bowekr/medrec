@@ -31,21 +31,6 @@
 	  </div>
 
 
-		@if ($authUserRole === "admin")
-		  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-		    <a href={{ url('doctors') }} class="card card-banner card-blue-light">
-		      <div class="card-body">
-		        <i class="icon fa fa-stethoscope fa-4x"></i>
-		        <div class="content">
-		          <div class="title">Total Doctors</div>
-		          <div class="value">{{ $doctors_count }}</div>
-		        </div>
-		      </div>
-		    </a>
-		  </div>
-	  @endif
-
-
 		@if ($authUserRole === "doctor" || $authUserRole === "admin")
 		  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 		    <a href={{ url('record') }} class="card card-banner card-green-light">

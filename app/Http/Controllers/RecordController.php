@@ -89,8 +89,14 @@ class RecordController extends Controller
     public function edit($id)
     {
         $record = Record::findOrFail($id);
+        $doctors = User::where('role', 'doctor')->get();
+        $patients = Patient::all();
 
-        return view('record.record.edit', compact('record'));
+        return view('record.record.edit', [
+            'record' => $record,
+            'doctors' => $doctors,
+            'patients' => $patients
+        ]);
     }
 
     /**

@@ -1,58 +1,61 @@
-<form action="/patients" method="POST">
-	{{ csrf_field() }}
 
-	<div class="form-group">
-		<label for="name">Patient Name</label>
-		<input class="form-control" type="text" id="name" name="name" />
-	</div>
+<div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
+    {!! Form::label('name', 'Name', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+       {!! Form::text('name', null, [ 'class' => "form-control"]) !!}
+    </div>
+</div>
 
+<div class="form-group {{ $errors->has('gender') ? 'has-error' : ''}}">
+    {!! Form::label('gender', 'Gender', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        {!! Form::select('gender', [
+            'Male' => 'Male',
+            'Female' => 'Female'
+        ], null, [
 
-	<div class="form-group">
-		<label class="control-label" style="display: block;">Gender</label>
-		<div class="radio radio-inline">
-			<input type="radio" id="gender1" name="gender" value="Female" />
-			<label for="gender1">Female</label>
-		</div>
+            'class' => 'form-control'
+        ]) !!}
+    </div>
+</div>
 
-		<div class="radio radio-inline">
-			<input type="radio" id="gender2" name="gender" value="Male"/>
-			<label for="gender2">Male</label>
-		</div>
-	</div>
+<div class="form-group {{ $errors->has('address') ? 'has-error' : ''}}">
+    {!! Form::label('address', 'Address', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+       {!! Form::textarea('address', null, [ 'class' => "form-control"]) !!}
+    </div>
+</div>
 
-	<div class="form-group">
-		<label for="address">Address</label>
-		<input type="text" name="address" class="form-control" id="address"></input>
-	</div>
+<div class="form-group {{ $errors->has('born_date') ? 'has-error' : ''}}">
+    {!! Form::label('born_date', 'Born Date', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+       {!! Form::text('born_date', null, [ 'class' => "form-control"]) !!}
+    </div>
+</div>
 
-	<div class="form-group">
-		<label for="born_date">Born Date e.g (dd/mm/yy) (24/02/1992)</label>
-		<input type="text" name="born_date" class="form-control" id="bornDate"></input>
-	</div>
+<div class="form-group {{ $errors->has('phone_number') ? 'has-error' : ''}}">
+    {!! Form::label('phone_number', 'Phone Number', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+       {!! Form::text('phone_number', null, [ 'class' => "form-control"]) !!}
+    </div>
+</div>
 
-	<div class="form-group">
-		<label for="phone_number">Phone Number</label>
-		<input type="text" name="phone_number" class="form-control" id="bornDate"></input>
-	</div>
+<div class="form-group {{ $errors->has('blood_type') ? 'has-error' : ''}}">
+    {!! Form::label('blood_type', 'blood_type', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+       {!! Form::select('blood_type', [
+                                       'O' => 'O',
+                                       'A' => 'A',
+                                       'AB' => 'AB'
+                                   ], null, [
+                                       'class' => 'form-control'
+                                   ]) !!}
+    </div>
+</div>
 
+<div class="form-group">
+    <div class="col-md-offset-4 col-md-4">
 
-	<div class="form-group">
-		<label class="control-label" style="display: block;">Blood Type</label>
-		<div class="radio radio-inline">
-			<input type="radio" id="bloodTypeO" name="blood_type" value="O" />
-			<label for="bloodTypeO">O</label>
-		</div>
-
-		<div class="radio radio-inline">
-			<input type="radio" id="bloodTypeA" name="blood_type" value="A"/>
-			<label for="bloodTypeA">A</label>
-		</div>
-
-		<div class="radio radio-inline">
-			<input type="radio" id="bloodTypeAB" name="blood_type" value="AB"/>
-			<label for="bloodTypeAB">AB</label>
-		</div>
-	</div>
-
-	<button class="btn btn-primary" type="submit">Save</button>
-</form>
+        {!! Form::submit(isset($submitButtonText) ? $submitButtonText : 'Create', ['class' => 'btn btn-primary']) !!}
+    </div>
+</div>

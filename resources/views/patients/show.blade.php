@@ -7,12 +7,12 @@
                     <div class="panel-heading">Record {{ $patient->id }}</div>
                     <div class="panel-body">
 
-                        <a href="{{ url('medicines/' . $patient->id . '/edit') }}" class="btn btn-primary btn-xs" title="Edit Record"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+                        <a href="{{ url('patients/' . $patient->id . '/edit') }}" class="btn btn-primary btn-xs" title="Edit Record"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
 
 
                         {!! Form::open([
                             'method'=>'DELETE',
-                            'url' => ['medicines', $patient->id],
+                            'url' => ['patients/', $patient->id],
                             'style' => 'display:inline'
                         ]) !!}
                             {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true"/>', array(

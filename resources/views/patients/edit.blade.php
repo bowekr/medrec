@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Edit Record {{ $record->id }}</div>
+                    <div class="panel-heading">Edit Record {{ $patient->id }}</div>
                     <div class="panel-body">
 
                         @if ($errors->any())
@@ -16,14 +16,14 @@
                             </ul>
                         @endif
 
-                        {!! Form::model($record, [
+                        {!! Form::model($patient, [
                             'method' => 'PATCH',
-                            'url' => ['/record', $record->id],
+                            'url' => ['/patients', $patient->id],
                             'class' => 'form-horizontal',
                             'files' => true
                         ]) !!}
 
-                        @include ('record.record.form', ['submitButtonText' => 'Update', 'doctors' => $doctors])
+                        @include ('patients.form', ['submitButtonText' => 'Update'])
 
                         {!! Form::close() !!}
 
@@ -32,4 +32,12 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('assetsInclude')
+    <script>
+        $(document).ready(function() {
+            $('#born_date').datepicker();
+        })
+    </script>
 @endsection

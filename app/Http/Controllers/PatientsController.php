@@ -105,7 +105,9 @@ class PatientsController extends Controller
 
         Session::flash('flash_message', 'Patient updated!');
 
-        return redirect('patient');
+        return redirect()->action('PatientsController@show', [
+            'id' => $patient->id
+        ]);;
     }
 
     /**
